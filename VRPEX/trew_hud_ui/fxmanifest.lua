@@ -1,21 +1,8 @@
-resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
+fx_version 'cerulean'
+games {'gta5'}
 
-dependency "vrp"
+ui_page 'html/ui.html'
 
-server_scripts{
-  "@vrp/lib/utils.lua",
-  "server_vrp.lua",
-	'locales/languages.lua',
-	'config.lua'
-}
-
-client_scripts {
-	"@vrp/lib/utils.lua",
-	'locales/languages.lua',
-	'config.lua',
-	'client/client.lua',
-	'client/hansolo.lua'
-}
 
 files {
 	'html/ui.html',
@@ -120,11 +107,25 @@ files {
 	'html/img/weapons/wrench.png',
 
 
-
+	
 	'html/sounds/seatbelt-buckle.ogg',
 	'html/sounds/seatbelt-unbuckle.ogg',
 
 	'html/sounds/car-indicators.ogg',
 }
 
-ui_page 'html/ui.html'
+client_scripts {
+	"@vrp/lib/utils.lua",
+	'locales/languages.lua',
+	'config.lua',
+	'client/client.lua',
+	'client/hansolo.lua'
+}
+
+server_scripts {
+	"@vrp/lib/utils.lua",
+	'locales/languages.lua',
+	'config.lua',
+	'server/server.lua',
+	'server/milleniumfalcon.lua'
+}
